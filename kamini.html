@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelloHelper Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        #chatbox {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            width: 400px;
+            height: 500px;
+            overflow-y: scroll;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .user-message {
+            background-color: #D1E8E2;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: left;
+            font-weight: bold;
+        }
+        .ai-message {
+            background-color: #F0F8FF;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: left;
+            color: #333;
+        }
+        #userInput {
+            width: 350px;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        #sendBtn {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #sendBtn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to HelloHelper!</h1>
+    <p>Let’s master the digital world together! 😊</p>
+    <div id="chatbox">
+        <div class="ai-message"><strong>HelloHelper:</strong> Hello there! I'm HelloHelper, your tech-savvy friend. How can I assist you today?</div>
+    </div>
+    <input type="text" id="userInput" placeholder="Type your question..." />
+    <button id="sendBtn" onclick="sendMessage()">Send</button>
+
+    <script>
+        function sendMessage() {
+            let userInput = document.getElementById('userInput').value;
+            let chatbox = document.getElementById('chatbox');
+
+            // Add user message to the chatbox with class "user-message"
+            chatbox.innerHTML += `<div class="user-message"><strong>You:</strong> ${userInput}</div>`;
+
+            // Process the response based on user input
+            let botResponse = getBotResponse(userInput);
+
+            // Add bot response to the chatbox with class "ai-message"
+            chatbox.innerHTML += `<div class="ai-message"><strong>HelloHelper:</strong> ${botResponse}</div>`;
+
+            // Scroll to the bottom to see the latest messages
+            chatbox.scrollTop = chatbox.scrollHeight;
+
+            // Clear the input field
+            document.getElementById('userInput').value = '';
+        }
+
+        function getBotResponse(userInput) {
+            userInput = userInput.toLowerCase();
+
+            if (userInput.includes("browser")) {
+                return "A browser is a tool that lets you view websites, like Google Chrome or Firefox.";
+            } else if (userInput.includes("email setup")) {
+                return "An email is like sending a letter, but digitally. You need an email provider like Gmail or Outlook.";
+            } else if (userInput.includes("how do i connect to wi-fi")) {
+                return "To connect to Wi-Fi, go to your device settings and find Wi-Fi. Then, select your network and enter the password!";
+            } else if (userInput.includes("whatsapp")) {
+                return "WhatsApp is a free messaging app. You can send text, photos, and videos to friends or family. Just download it from your app store!";
+            } else if (userInput.includes("facebook")) {
+                return "Facebook is a social media platform where you can connect with friends, share updates, and chat. It's a great way to stay in touch!";
+            } else if (userInput.includes("online shopping")) {
+                return "Online shopping lets you buy products from the internet. Websites like Amazon or Flipkart allow you to browse, order, and have items delivered to your door.";
+            } else if (userInput.includes("how do i send a message")) {
+                return "To send a message, open a messaging app like WhatsApp or SMS. Type your text in the chat and press send!";
+            } else if (userInput.includes("how do i use zoom")) {
+                return "Zoom is an app for video calls. Download it, sign up, and join meetings with a link or meeting ID from the host.";
+            } else if (userInput.includes("how do i create a password")) {
+                return "A strong password has letters, numbers, and symbols. Use something easy for you to remember but hard for others to guess!";
+            } else if (userInput.includes("google search")) {
+                return "Google Search lets you find information online. Just type what you want to know in the search bar and hit enter.";
+            } else if (userInput.includes("how do i use email")) {
+                return "To use email, sign up for an email account. Once signed in, click ‘Compose’ to write a new email and enter the recipient’s email address.";
+            } else if (userInput.includes("how do i update my phone")) {
+                return "To update your phone, go to settings, find ‘Software Update,’ and follow the instructions to install the latest version.";
+            } else {
+                return "I'm still learning! Try asking me something about browsers, email setup, Wi-Fi connection, WhatsApp, or online shopping.";
+            }
+        }
+    </script>
+</body>
+</html>
