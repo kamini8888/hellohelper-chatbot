@@ -19,7 +19,7 @@ JavaScript: For handling user input and generating dynamic responses.
 
 Responsive Design: Ensures the chatbot is accessible on both desktop and mobile devices.
 
-##Try these prompts to interact with HelloHelper:
+## Try these prompts to interact with HelloHelper:
 "What is a browser?"
 
 "How do I set up an email?"
