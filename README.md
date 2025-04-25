@@ -18,3 +18,30 @@ HTML/CSS: For the structure and styling of the chatbot interface.
 JavaScript: For handling user input and generating dynamic responses.
 
 Responsive Design: Ensures the chatbot is accessible on both desktop and mobile devices.
+
+##Try these prompts to interact with HelloHelper:
+"What is a browser?"
+
+"How do I set up an email?"
+
+"How do I connect to Wi-Fi?"
+
+"Tell me about WhatsApp."
+
+"What is Facebook?"
+
+"How do I shop online?"
+
+"How do I send a message?"
+
+"How do I use Zoom?"
+
+"How do I create a password?"
+
+"What is Google Search?"
+
+"How do I use email?"
+
+"How do I update my phone?"
+
+"Help!"
